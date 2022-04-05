@@ -1,10 +1,11 @@
 import fetch from 'node-fetch';
 import * as fs from 'fs';
 
-export default async function (queryFile: string) {  
+export default async function (queryFile: string) {
+    console.log('\n---=== Executing: ' + queryFile + ' ===---\n');
 
     const query = getQueryFile(queryFile);
-    console.log('Executing Query:\n' + query);
+    console.log('\nQuery:\n' + query);
 
     let body = await postToAPI(query);
     console.log('\nResults:\n' + jsonFormat(body));

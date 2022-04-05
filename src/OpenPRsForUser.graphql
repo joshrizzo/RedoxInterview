@@ -1,0 +1,16 @@
+query OpenPRsForUser {
+  user(login: "psparsa") {
+    name
+    pullRequests(last: 20, states: [OPEN], orderBy: {field: CREATED_AT, direction: ASC}) {
+      edges {
+        node {
+          createdAt
+          repository {
+            name
+          }
+          title
+        }
+      }
+    }
+  }
+}

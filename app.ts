@@ -10,7 +10,15 @@ require('readline')
         process.exit();
     });
 
+// Using a function wrapper so we can use async/await.
+CallQueries()
 
 
-GitHubClient('request');
+async function CallQueries() {
 
+    await GitHubClient('ClosedIssues');
+    await GitHubClient('GetRepositoryWithIssues');
+    await GitHubClient('LastOpenPRs');
+    await GitHubClient('OpenPRsForUser');
+
+}

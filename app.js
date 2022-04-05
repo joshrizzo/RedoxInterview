@@ -9,5 +9,12 @@ require('readline')
     .question('', function () {
     process.exit();
 });
-(0, GitHubClient_1.default)('request');
+// Using a function wrapper so we can use async/await.
+CallQueries();
+async function CallQueries() {
+    await (0, GitHubClient_1.default)('ClosedIssues');
+    await (0, GitHubClient_1.default)('GetRepositoryWithIssues');
+    await (0, GitHubClient_1.default)('LastOpenPRs');
+    await (0, GitHubClient_1.default)('OpenPRsForUser');
+}
 //# sourceMappingURL=app.js.map

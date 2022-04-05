@@ -32,7 +32,10 @@
     <None Include="app.ts" />
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <Content Include="src\request.graphql" />
+    <Content Include="src\GetRepositoryWithIssues.graphql" />
+    <Content Include="src\OpenPRsForUser.graphql" />
+    <Content Include="src\LastOpenPRs.graphql" />
+    <Content Include="src\ClosedIssues.graphql" />
     <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>

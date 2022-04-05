@@ -1,4 +1,4 @@
-query {
+query ClosedIssues {
   repository(owner:"ramda", name:"ramda") {
     issues(states:CLOSED) {
       totalCount

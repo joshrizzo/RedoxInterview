@@ -1,0 +1,19 @@
+query GetRepositoryWithIssues {
+  repository(owner: "ramda", name: "ramda"){
+    id
+    nameWithOwner
+    description
+    url
+    issues(last: 2) {
+      totalCount
+      nodes{
+        title
+        createdAt
+        author {
+          login
+        }
+       
+      }
+    }
+  }
+}
