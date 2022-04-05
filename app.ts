@@ -16,9 +16,10 @@ CallQueries()
 
 async function CallQueries() {
 
-    await GitHubClient('ClosedIssues');
-    await GitHubClient('GetRepositoryWithIssues');
-    await GitHubClient('LastOpenPRs');
-    await GitHubClient('OpenPRsForUser');
+    //await GitHubClient('ClosedIssues');
+    //await GitHubClient('GetRepositoryWithIssues');
+    //await GitHubClient('LastOpenPRs');
+    //await GitHubClient('OpenPRsForUser');
+    await GitHubClient('TotalCountOfPRs');
 
 }

@@ -1,0 +1,10 @@
+query TotalCountOfPRs {
+  organization(login: "ramda") {
+    repository(name: "ramda") {
+      name
+      pullRequests(last: 10) {
+        totalCount
+      }
+    }
+  }
+}
