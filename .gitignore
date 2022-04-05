@@ -560,3 +560,6 @@ FodyWeavers.xsd
 
 *.js
 *.map
+.vs/
+.vscode
+package-lock.json
