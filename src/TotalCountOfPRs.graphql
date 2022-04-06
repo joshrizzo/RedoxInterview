@@ -1,9 +1,13 @@
 query TotalCountOfPRs {
-  organization(login: "ramda") {
-    repository(name: "ramda") {
-      name
-      pullRequests(last: 10) {
-        totalCount
+  search(query: "org:ramda is:pr", type: ISSUE, last: 10) {
+    issueCount
+    edges {
+      node {
+        ... on PullRequest {
+          url
+          title
+          createdAt
+        }
       }
     }
   }
